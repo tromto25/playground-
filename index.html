@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clever-Tanken – Spritpreise vergleichen &amp; günstig tanken</title>
+  <meta name="description" content="Aktuelle Kraftstoffpreise vergleichen: Diesel, Super E10, Super E5 und mehr. Finde die günstigste Tankstelle in deiner Nähe.">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Kopfbereich -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./">
+        <span class="logo-mark">⛽</span>
+        <span class="logo-text">clever<span class="logo-accent">-tanken</span></span>
+      </a>
+      <nav class="main-nav">
+        <a href="#" class="active">Tankstellen</a>
+        <a href="#">Preisentwicklung</a>
+        <a href="#">Spritsorten</a>
+        <a href="#">App</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Such-Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Günstig tanken – Spritpreise vergleichen</h1>
+      <p class="hero-sub">Finde die günstigste Tankstelle in deiner Nähe. Preise für Diesel, Super E10, Super E5 &amp; mehr.</p>
+
+      <form id="search-form" class="search-bar" autocomplete="off">
+        <div class="field field-query">
+          <label for="query">Ort oder PLZ</label>
+          <input type="text" id="query" name="query" placeholder="z. B. Berlin oder 10115" required>
+        </div>
+        <div class="field">
+          <label for="fuel">Kraftstoff</label>
+          <select id="fuel" name="fuel"></select>
+        </div>
+        <div class="field">
+          <label for="radius">Umkreis</label>
+          <select id="radius" name="radius">
+            <option value="2">2 km</option>
+            <option value="5" selected>5 km</option>
+            <option value="10">10 km</option>
+            <option value="20">20 km</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-search">Suchen</button>
+      </form>
+
+      <div class="quick-row">
+        <span class="quick-label">Schnellwahl:</span>
+        <div id="fuel-chips" class="chips"></div>
+      </div>
+      <div class="quick-row">
+        <span class="quick-label">Orte:</span>
+        <div id="city-chips" class="chips"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ergebnisse -->
+  <main class="container main-results">
+    <div class="results-bar">
+      <div id="results-head" class="results-head" hidden></div>
+      <div class="sort-controls">
+        <span class="sort-label">Sortieren:</span>
+        <button id="sort-price" class="sort-btn active" type="button">Preis</button>
+        <button id="sort-distance" class="sort-btn" type="button">Entfernung</button>
+      </div>
+    </div>
+
+    <div id="status" class="status hidden"></div>
+    <ul id="results" class="results-list"></ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>Hinweis:</strong> Dies ist ein funktionaler Nachbau zu Demonstrationszwecken.
+      Die angezeigten Preise sind realistische Beispieldaten und keine echten Live-Preise.</p>
+      <p class="footer-links">
+        <a href="#">Über uns</a> · <a href="#">Datenschutz</a> ·
+        <a href="#">Impressum</a> · <a href="#">Kontakt</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Detail-Modal -->
+  <div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Schließen">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
