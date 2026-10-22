@@ -1,0 +1,101 @@
+EINKAUFSLISTE – Kochplan KW [Nr] / [Mo Datum] – [So Datum]
+Erstellt: [YYYY-MM-DD]
+Personenzahl: [N] P  (in Phase 1 abgefragt; Hochrechnung auf andere Größe nur auf Wunsch)
+Einkaufsort: Aldi (Süd), Sondersektion „Nicht-Aldi" am Ende.
+
+================================================================
+OBST & GEMÜSE
+================================================================
+Artikel                                            | [N] P
+---------------------------------------------------|---------------
+[Beispiel: Zwiebeln (gelb)]                        | 3 Stück
+[Beispiel: Knoblauch]                              | 1 Knolle
+[Beispiel: Petersilie glatt]                       | 1 Bund
+
+================================================================
+KÜHLREGAL (Milch, Käse, Eier, Tofu)
+================================================================
+Artikel                                            | [N] P
+---------------------------------------------------|---------------
+[Beispiel: Sahne 30 %]                             | 400 ml
+[Beispiel: Mozzarella Kugel]                       | 2 Pck.
+
+================================================================
+TROCKENWAREN / KONSERVEN / GEWÜRZE
+================================================================
+Artikel                                            | [N] P
+---------------------------------------------------|---------------
+[Beispiel: Spaghetti 500 g]                        | 1 Pck.
+[Beispiel: Tomaten passiert]                       | 2 Pck. 500 g
+
+================================================================
+TIEFKÜHL
+================================================================
+Artikel                                            | [N] P
+---------------------------------------------------|---------------
+[Beispiel: Lachsfilet TK]                          | 500 g
+
+================================================================
+BACKWAREN
+================================================================
+Artikel                                            | [N] P
+---------------------------------------------------|---------------
+[Beispiel: Tortilla-Wraps]                         | 1 Pck.
+
+================================================================
+FLEISCH / FISCH (frisch)
+================================================================
+Artikel                                            | [N] P
+---------------------------------------------------|---------------
+[Beispiel: Hähnchenbrust]                          | 600 g
+
+================================================================
+FRÜHSTÜCK (nur falls Frühstück mitgeplant)
+================================================================
+Artikel                                            | [N] P
+---------------------------------------------------|---------------
+[Beispiel: Haferflocken Großblatt 500 g]           | 1 Pck.
+[Beispiel: Naturjoghurt 3,5 %]                     | 1 kg-Becher
+[Beispiel: Skyr natur]                             | 2 Becher
+[Beispiel: Beeren-Mischung TK]                     | 1 Pck. 500 g
+[Beispiel: Bananen]                                | 5 Stück
+[Beispiel: Walnüsse gehackt]                       | 1 Pck. 100 g
+[Beispiel: Vollkornbrot]                           | 1 Pck.
+
+Hinweis Frühstücks-Routine: [Plan-spezifisch eintragen, z. B.:
+„Mo–Mi: Overnight Oats Banane-Nuss / Do–Fr: Bircher Müsli / Sa–So: Spiegelei auf Vollkornbrot"]
+Prep: [Plan-spezifisch eintragen, z. B. „So 17 Uhr 10 Min Vorbereitung für Overnight Oats und Bircher"]
+
+================================================================
+SONSTIGES (Aldi)
+================================================================
+Artikel                                            | [N] P
+---------------------------------------------------|---------------
+[Beispiel: Olivenöl extra vergine]                 | 1 Fl. 500 ml
+
+================================================================
+NICHT-ALDI (woanders besorgen)
+================================================================
+Artikel                                            | [N] P         | Wo?
+---------------------------------------------------|---------------|-------------------
+[Beispiel: Hoisinsauce]                            | 1 Fl.         | Asialaden / dm
+
+================================================================
+VERMUTLICH VORRÄTIG – BITTE VOR EINKAUF PRÜFEN
+================================================================
+- Salz
+- Pfeffer (schwarz, gemahlen)
+- Olivenöl (ggf. nachkaufen, siehe oben)
+- Mehl
+- Eier
+- Zucker
+- [weitere Standardzutaten je nach Plan]
+
+================================================================
+HINWEISE
+================================================================
+- Mengen sind konsolidiert über alle Rezepte der Woche, skaliert auf [N] Personen.
+- Hochrechnung auf andere Personenzahl auf Zuruf ergänzbar.
+- Bei Frischwaren (Petersilie, Salat) lieber knapp einkaufen, eher nachkaufen.
+- Tiefkühl-Lachs am Vorabend ins Kühlregal legen, nicht bei Raumtemperatur auftauen.
+- [Plan-spezifische Hinweise hier ergänzen]
