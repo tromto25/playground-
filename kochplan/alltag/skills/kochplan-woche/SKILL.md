@@ -31,7 +31,7 @@ Alle Dateien liegen in T's Google Drive. **Google Drive ist die einzige Arbeitsa
 | Wochenpläne (Output) | `Rezepte/Wochenpläne/` | `1wUbSoDLHEiJXbKGcS3C9Tb5VFosCh8yr` |
 | Tabelle „Kochplan" | `Rezepte/Kochplan` | `1EGEHyF_lTqhfWEcc2dxYU_lEojisyQSVM41iFYrhi-Q` |
 
-**Tabelle „Kochplan"** (Google Sheet, von T am Handy editierbar) mit den Blättern `Rezepte`, `Frühstücke`, `Wünsche` (Aufbau in `tabelle-kochplan.md`) sowie:
+**Tabelle „Kochplan"** (Google Sheet, von T am Handy editierbar) mit den Blättern `Rezepte`, `Zutaten`, `Frühstücke`, `Wünsche` (Aufbau in `tabelle-kochplan.md`) sowie:
 
 - `Kochlog` – Spalten: Datum (YYYY-MM-DD) | Gericht | ID | Status | Bewertung | Reste | Personen | Notiz. Neue Zeilen per Anhängen; Status-Änderungen per Zellen-Update.
 - `Vorrat` – Spalten: Zutat | Bereich | Status (`da` / `knapp` / `leer`). Nur `da` gilt als vorrätig.
@@ -45,7 +45,8 @@ Alle Dateien liegen in T's Google Drive. **Google Drive ist die einzige Arbeitsa
 
 **Auswahl-Pools und Lernspeicher liegen in der Tabelle „Kochplan"** (ID oben; Spalten, Status-Werte und Auswahl-Hinweise in `tabelle-kochplan.md`):
 
-- Blatt `Rezepte` – Index aller Hauptgerichte aus T's Ordner plus Neuentdeckungen (Spalten u. a. Kategorie, Zeit, Vegi, Aldi, Status, Datei, Gruppe). **Primärer Auswahl-Pool Hauptmahlzeiten. Beim Vorschlag immer zuerst dieses Blatt lesen, nicht den PDF-Ordner durchsuchen.** PDFs werden erst geöffnet, wenn ein Gericht ausgewählt ist und die Zutaten für die Einkaufsliste gebraucht werden bzw. das PDF in den Wochenordner kopiert wird. Pflegen: neue Rezepte anhängen, Status anpassen (standard/wunsch/neu/pause/nein), Zeit-/Aldi-Werte korrigieren.
+- Blatt `Rezepte` – Index aller Hauptgerichte aus T's Ordner plus Neuentdeckungen (Spalten u. a. Kategorie, Zeit, Vegi, Aldi, Status, Datei, Gruppe). **Primärer Auswahl-Pool Hauptmahlzeiten. Beim Vorschlag immer zuerst dieses Blatt lesen, nicht den PDF-Ordner durchsuchen.**
+- Blatt `Zutaten` – Zutaten je Rezept-ID, normiert auf 2 Portionen, mit Abteilung und Basis-Kennzeichen. **Quelle für Einkaufsliste, Vorratsabgleich, Resteverwertung und Zutaten-Überschneidung.** Ein PDF wird nur geöffnet, wenn ein ausgewähltes Gericht hier noch keine Zeilen hat (dann die Zutaten danach als Zeilen anhängen) oder T im Kochmodus die Zubereitung braucht. Pflegen: neue Rezepte anhängen, Status anpassen (standard/wunsch/neu/pause/nein), Zeit-/Aldi-Werte korrigieren.
 - Blatt `Frühstücke` – analog für Frühstücke, mit Typ (Make-ahead, Schnell, Warm/Frisch, Brot-basiert), Haltbarkeit und Kurzrezept, aus dem der Skill bei Bedarf ein PDF erzeugt.
 - Blatt `Wünsche` – T's Lieblingsgerichte, kurzfristige Wünsche, Bewertungen, Ablehnungen und allgemeine Präferenzen (Mittag/Abend und Frühstück), unterschieden über die Spalte „Art". Vor jedem Plan lesen, danach ergänzen.
 
@@ -193,6 +194,8 @@ Quelle = Dateiname im Rezepteordner ODER „HF-Stil/eigen" ODER URL.
 Direkt darunter: kurze Begründung, warum die Mischung so aussieht (1–2 Sätze, kein Roman). Wenn ein Wunschgericht enthalten ist, das markieren. Bei Frühstück: Hinweis auf Vorbereitungstag (typisch Sonntagabend) und ungefähre Vorbereitungsdauer.
 
 ### Phase 6 – Strukturierte Einkaufsliste
+
+Zutaten aus dem Blatt `Zutaten` holen (Mengen von 2 Portionen auf die Personenzahl umrechnen). Fehlen für ein Gericht die Zeilen, das PDF lesen und die Zutaten im selben Format an das Blatt anhängen; ist das PDF nicht lesbar (Scan), T einmal kurz nach den Hauptzutaten fragen und diese eintragen.
 
 Schreibe die strukturierte Einkaufsliste als `.txt`-Datei in den **Wochenunterordner**:
 

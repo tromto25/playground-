@@ -56,7 +56,7 @@ Antwortet T nur mit „passt", „ok" oder geht direkt zur Auswahl über: Status
 3. **Option A = bewährt** (Status `standard`, bevorzugt `++`/`+` oder Lieblingsgericht). **Option B = Abwechslung** (Neuentdeckung im HF-Stil, `neu`, oder ein länger nicht gekochtes Gericht). Mindestens eine vegetarische Option pro Tag.
 4. **Reste zuerst:** Offene Reste aus dem Kochlog in mindestens einer Option von Tag 1 oder 2 verwerten und das in der Tabelle markieren.
 5. **Haltbarkeit:** Frischer Fisch, Hackfleisch, zarte Kräuter und Blattsalat auf Tag 1; Robustes (Kohl, Wurzelgemüse, TK, Konserven) auf Tag 3.
-6. **Zutaten-Überschneidung:** Bei der Auswahl der Optionen darauf achten, dass angebrochene Packungen (Sahne, Spinat, Feta, Frischkäse, Kräuterbund, Kokosmilch) an einem anderen Tag weiterverwendet werden können. Mögliche Kombinationen kurz ausweisen.
+6. **Zutaten-Überschneidung:** Mit dem Blatt `Zutaten` prüfen und bei der Auswahl der Optionen darauf achten, dass angebrochene Packungen (Sahne, Spinat, Feta, Frischkäse, Kräuterbund, Kokosmilch) an einem anderen Tag weiterverwendet werden können. Mögliche Kombinationen kurz ausweisen.
 
 **Ausgabe im Chat (kompakt):**
 
@@ -78,7 +78,7 @@ Wahl? z. B. „A B B"
 
 T antwortet z. B. „A B B". Dann ohne weitere Bestätigung:
 
-1. Zutaten der gewählten Gerichte ermitteln (PDF per Drive-Connector aus dem Kategorienordner lesen bzw. eigenes Rezept bei NEU), auf Personenzahl skalieren, konsolidieren.
+1. Zutaten der gewählten Gerichte aus dem Blatt `Zutaten` holen (Mengen für 2 Portionen, auf die Personenzahl umrechnen) und konsolidieren. Fehlen Zeilen: PDF lesen bzw. bei NEU das eigene Rezept nehmen und die Zutaten an das Blatt anhängen; bei unlesbarem Scan T einmal nach den Hauptzutaten fragen.
 2. **Abziehen:** alles aus `Vorrat` mit Status `da`; offene Reste aus dem Kochlog.
 3. **Nur echte Zweifel abfragen**, in einem Block und höchstens fünf Positionen; typische Kandidaten sind Dinge, die oft angebrochen herumstehen (Sahne, Parmesan, Frischkäse, Kokosmilch):
    > Noch da? Sahne, Parmesan. (Keine Antwort = kaufen.)

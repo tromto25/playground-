@@ -16,7 +16,7 @@ Google Sheet in `Rezepte/` (ID `1EGEHyF_lTqhfWEcc2dxYU_lEojisyQSVM41iFYrhi-Q`). 
 
 | Spalte | Inhalt |
 |---|---|
-| ID | `HP..` Pool, `SP..` Sonderfall, `AU..` Auflauf, `BK..` Backen, `NE..` Neuentdeckung |
+| ID | `HP..` Pool, `SP..` Sonderfall, `AU..` Auflauf, `BK..` Backen, `NE..` Neuentdeckung; neue Rezepte bekommen die nächste freie Nummer ihrer Gruppe |
 | Gericht | Anzeigename |
 | Kategorie | Pasta, Reis/Asia, Kartoffel, Pfanne, Auflauf, Suppe, Eintopf, Brot/Pizza, Fisch, Fleisch, Vegetarisch-ohne-Stärkebasis; Grundlage der Anti-Monotonie-Regel |
 | Zeit (min) | geschätzte Gesamtzeit; Wochen- und 3-Tage-Pool nur ≤ 30 |
@@ -29,6 +29,23 @@ Google Sheet in `Rezepte/` (ID `1EGEHyF_lTqhfWEcc2dxYU_lEojisyQSVM41iFYrhi-Q`). 
 | Erstmals | Datum der ersten Einplanung (vor allem bei Neuentdeckungen) |
 
 Nicht im Blatt, nur zur Inspiration: `Sammlungen/` (vegane Drei-Zutaten-Rezepte, zwei Scans von 2019) für Veggie-Wochen; `Sonstiges/Top Gewürze.pdf` als Referenz für den Gewürzbestand.
+
+## Blatt `Zutaten`
+
+Eine Zeile pro Zutat und Rezept, **Mengen immer für 2 Portionen** (beim Eintragen aus dem Original umrechnen; Originalportionen in die Notiz im Blatt `Rezepte`).
+
+| Spalte | Inhalt |
+|---|---|
+| ID | Rezept-ID aus `Rezepte` |
+| Zutat | Grundzutat als Substantiv (wird zum Bring!-Artikel) |
+| Menge (2 P) | Zahl; leer bei „nach Bedarf“ |
+| Einheit | g, ml, Stk, EL, TL, Zehe, Dose, Bd, Prise, n. B. … |
+| Merkmal | Sorte, Form, TK/frisch, Ersatz für HelloFresh-Gewürzmischungen |
+| Abteilung | Obst/Gemüse, Kühlregal, Trocken/Konserven, Tiefkühl, Fleisch/Fisch, Gewürze/Würzmittel, Backwaren |
+| Basis | `ja` = typischer Vorratsartikel; ob er wirklich da ist, entscheidet das Blatt `Vorrat` |
+| Notiz | frei |
+
+Noch ohne Zutaten (PDF nicht lesbar): HP12 Udon, HP16 Lachs Senf-Honigrahm, HP18 Kartoffelpfanne. Beim ersten Einplanen T nach den Hauptzutaten fragen und eintragen.
 
 ## Blatt `Frühstücke`
 
