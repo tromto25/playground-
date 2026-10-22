@@ -17,7 +17,7 @@ Der Skill lernt mit: jedes Gericht, das T beim Ausführen nennt oder lobt, wande
 
 ## Ablageort: Google Drive
 
-Alle Dateien liegen in T's Google Drive, nicht mehr lokal in OneDrive. Zugriff über die Google-Drive- und Google-Sheets-Connectoren. Ordner und Dateien **über die ID** ansprechen, nicht über den Namen suchen.
+Alle Dateien liegen in T's Google Drive. **Google Drive ist die einzige Arbeitsablage; OneDrive (`C:\Users\tt-st\OneDrive\Rezepte`) ist nur noch Archiv** – dort nichts lesen, schreiben oder abgleichen. Nennt T ein Rezept, das nur in OneDrive liegt, bitte ihn, es nach Drive hochzuladen. Zugriff über die Google-Drive- und Google-Sheets-Connectoren. Ordner und Dateien **über die ID** ansprechen, nicht über den Namen suchen.
 
 | Was | Name in Drive | ID |
 |---|---|---|
