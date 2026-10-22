@@ -1,6 +1,6 @@
 # Standardgerichte – Index für `kochplan-woche`
 
-Vorgefertigter Katalog der Rezepte aus T's Ordner `C:\Users\tt-st\OneDrive\Rezepte\`, geeignet für die wöchentliche Vorschlagslogik. Der Skill liest **diese Datei** beim Vorschlag, nicht den ganzen PDF-Ordner. Einzelne PDFs werden erst geöffnet, wenn ein Gericht für die Woche ausgewählt ist und die Mengen für die Einkaufsliste extrahiert werden müssen.
+Vorgefertigter Katalog der Rezepte aus T's Ordner `Rezepte_Spiegel/` in Google Drive, geeignet für die wöchentliche Vorschlagslogik. Der Skill liest **diese Datei** beim Vorschlag, nicht den ganzen PDF-Ordner. Einzelne PDFs werden erst geöffnet, wenn ein Gericht für die Woche ausgewählt ist und die Mengen für die Einkaufsliste extrahiert werden müssen.
 
 **Pflege-Hinweis:** Die Datei ist die Quelle der Wahrheit für den Auswahl-Pool. Neue Rezepte hier mit einer Zeile ergänzen, alte rauswerfen, Zeit-/Aldi-Werte korrigieren, wenn sie nicht stimmen. Der Skill verlässt sich primär auf diese Datei.
 
@@ -15,7 +15,7 @@ Vorgefertigter Katalog der Rezepte aus T's Ordner `C:\Users\tt-st\OneDrive\Rezep
 - **Vegi:** ja/nein – für Vegetarisch-Quote (mind. 2 pro Woche).
 - **Aldi:** grün/gelb/rot – Aldi-Tauglichkeit nach `aldi_sortiment.md`. Gelb/rot = Skill rückfragt.
 - **Status:** standard / wunsch / neu / pause / nein. „pause" = aktuell nicht vorschlagen, „nein" = endgültig raus.
-- **PDF:** Dateiname relativ zu `C:\Users\tt-st\OneDrive\Rezepte\`.
+- **PDF:** Dateiname relativ zu `Rezepte_Spiegel/` in Google Drive (Ordner-IDs in `SKILL.md`, Abschnitt Ablageort).
 - **Notiz:** Kurzhinweis (Aldi-Risiko, Schnellkoch-Variante, etc.).
 
 ## Pool – Hauptgerichte ≤30 Min (aktiv)

@@ -1,6 +1,6 @@
 ---
 name: kochplan-woche
-description: Kochplanung für T aus seinem Rezepteordner (OneDrive/Rezepte) im HF-Stil, Rezepte ≤ 30 Min, Aldi-Abgleich, Einkaufsliste im Bring!-Format. Drei Modi: (1) Wochenplan Mo–So mit Personenzahl-Abfrage, optional Frühstück, Rezept-PDFs im Wochenordner, Kochmodus; (2) 3-Tage-Modus: rollierend je zwei Vorschläge pro Tag nach Geschmack und Kochlog, nach Wahl sofort Bring!-Liste; (3) Resteverwerter aus Resten und Vorrat. IMMER nutzen bei „Kochplan", „Wochenplan", „Wochenmenü", „Speiseplan", „Essensplan", „Einkaufsliste Woche", „Frühstück planen", „nächste 3 Tage", „was koche ich die nächsten Tage", „Kochvorschlag", „neue Vorschläge", „Reste", „Resteverwertung", „was ist übrig", „was koche ich aus", bei „koch heute" / „los geht's mit X" im laufenden Plan und beim Fortsetzen. Nicht bei einzelnen Rezeptfragen ohne Planungs- oder Restebezug.
+description: Kochplanung für T aus seinem Rezepteordner (Google Drive, Rezepte_Spiegel) im HF-Stil, Rezepte ≤ 30 Min, Aldi-Abgleich, Einkaufsliste im Bring!-Format. Drei Modi: (1) Wochenplan Mo–So mit Personenzahl-Abfrage, optional Frühstück, Rezept-PDFs im Wochenordner, Kochmodus; (2) 3-Tage-Modus: rollierend je zwei Vorschläge pro Tag nach Geschmack und Kochlog, nach Wahl sofort Bring!-Liste; (3) Resteverwerter aus Resten und Vorrat. IMMER nutzen bei „Kochplan", „Wochenplan", „Wochenmenü", „Speiseplan", „Essensplan", „Einkaufsliste Woche", „Frühstück planen", „nächste 3 Tage", „was koche ich die nächsten Tage", „Kochvorschlag", „neue Vorschläge", „Reste", „Resteverwertung", „was ist übrig", „was koche ich aus", bei „koch heute" / „los geht's mit X" im laufenden Plan und beim Fortsetzen. Nicht bei einzelnen Rezeptfragen ohne Planungs- oder Restebezug.
 ---
 
 # Kochplan-Woche
@@ -9,11 +9,37 @@ description: Kochplanung für T aus seinem Rezepteordner (OneDrive/Rezepte) im H
 
 T möchte einmal pro Woche einen Kochplan, ohne dafür lange überlegen zu müssen. Dieser Skill nimmt ihm diese Last ab: er stellt sieben Gerichte zusammen, die alle in unter 30 Minuten kochbar sind, sorgt für Abwechslung über die Woche, kalkuliert die Zutaten parallel für zwei und vier Personen und liefert eine fertige Einkaufsliste, die zu Aldi passt. Optional plant der Skill zusätzlich das Frühstück der Woche mit – als Make-ahead-Routine (Sonntag vorbereiten) oder mit schnellen Optionen für unter der Woche und einer warmen Variante fürs Wochenende. Auf Wunsch führt der Skill T am Kochtag selbst Schritt für Schritt durch das Rezept.
 
-Die Rezepte einer Woche werden als PDF-Sammlung in einen Wochenunterordner kopiert, damit T sie offline und gebündelt zur Hand hat. Die Bring!-Einkaufsliste bleibt bewusst auf der oberen Ordnerebene, weil dort ein eigenes Python-Skript von T sie aufgreift.
+Die Rezepte einer Woche werden als PDF-Sammlung in einen Wochenunterordner kopiert, damit T sie offline und gebündelt zur Hand hat. Die Einkaufsliste für Bring! landet als Zeilen im Blatt `Einkauf` der Tabelle „Kochplan"; T's Apps Script überträgt sie von dort automatisch weiter.
 
 Neben dem Wochenplan gibt es einen **3-Tage-Modus** (rollierend, je zwei Optionen pro Tag, mit Kochlog und Vorratsabgleich) und einen **Resteverwerter**. Beide sind in `drei-tage-modus.md` beschrieben.
 
 Der Skill lernt mit: jedes Gericht, das T beim Ausführen nennt oder lobt, wandert in die Datei `wunschrezepte.md`, sodass der Pool über die Wochen wächst. Dasselbe gilt für Frühstücke.
+
+## Ablageort: Google Drive
+
+Alle Dateien liegen in T's Google Drive, nicht mehr lokal in OneDrive. Zugriff über die Google-Drive- und Google-Sheets-Connectoren. Ordner und Dateien **über die ID** ansprechen, nicht über den Namen suchen.
+
+| Was | Name in Drive | ID |
+|---|---|---|
+| Rezepte-Wurzel | `Rezepte_Spiegel/` | `1vtkCobEu4EfhAnqaOJoSIzIbhKuNFpgt` |
+| Hauptgerichte | `Rezepte_Spiegel/Hauptgerichte/` | `1dKds_LZi_zHPsPuw91U2vpXDx1-G_Asz` |
+| Aufläufe und Gratins | `Rezepte_Spiegel/Aufläufe und Gratins/` | `1Dw8lntvv7rJhOYtr3bPgUZ45pguqlxH_` |
+| Suppen | `Rezepte_Spiegel/Suppen/` | `1YLkKwVYOksWEXnSpV81R0tS28jUULqzG` |
+| Backen und Gebäck | `Rezepte_Spiegel/Backen und Gebäck/` | `19oFvuA07KCld1FU6wSGXwo--uyCETVbf` |
+| Sammlungen | `Rezepte_Spiegel/Sammlungen/` | `1Z9xEdZNLr2ex6e9sTbg23Ta5MKJG53WP` |
+| Sonstiges | `Rezepte_Spiegel/Sonstiges/` | `1xDP0nbb8yRj13W1QarmOtjg1o8e_oiF1` |
+| Wochenpläne (Output) | `Rezepte_Spiegel/Wochenpläne/` | `1wUbSoDLHEiJXbKGcS3C9Tb5VFosCh8yr` |
+| Tabelle „Kochplan" | `Rezepte_Spiegel/Kochplan` | `1EGEHyF_lTqhfWEcc2dxYU_lEojisyQSVM41iFYrhi-Q` |
+
+**Tabelle „Kochplan"** (Google Sheet, von T am Handy editierbar) mit drei Blättern:
+
+- `Kochlog` – Spalten: Datum (YYYY-MM-DD) | Gericht | ID | Status | Bewertung | Reste | Personen | Notiz. Neue Zeilen per Anhängen; Status-Änderungen per Zellen-Update.
+- `Vorrat` – Spalten: Zutat | Bereich | Status (`da` / `knapp` / `leer`). Nur `da` gilt als vorrätig.
+- `Einkauf` – Spalten: Artikel | Angaben | Laden | Für | Status | Angelegt. Hier schreibt der Skill die Einkaufsliste hinein (eine Zeile pro Artikel, Status `neu`). T's Apps Script `BringBridge` (Datei `Kochplan.gs`) holt Zeilen mit Status `neu` alle 10 Minuten ab, setzt sie auf die Bring!-Liste aus Spalte „Laden" und markiert sie als `übertragen`. **Der Skill ändert keine Zeilen, die nicht `neu` sind.**
+
+**Dateien lesen:** PDFs und Word-Dateien mit dem Drive-Connector lesen (Datei-ID aus der Ordnersuche `parentId = '<Ordner-ID>'`).
+**Dateien schreiben:** Neue Dateien mit dem Drive-Connector anlegen (Text mit `disableConversionToGoogleType`, damit .txt/.md erhalten bleiben; PDFs als Base64). Bestehende Textdateien lassen sich über den Connector nicht überschreiben, deshalb liegt aller veränderliche Zustand in der Tabelle.
+**Links an T:** immer den Drive-Link (`viewUrl`) der angelegten Datei bzw. des Ordners melden.
 
 ## Wissensbasis
 
@@ -21,7 +47,7 @@ Der Skill lernt mit: jedes Gericht, das T beim Ausführen nennt oder lobt, wande
 
 **Primärer Auswahl-Pool Frühstücke: `fruehstuecke.md`** (Index neben dieser SKILL.md). Strukturell analog zu `standardgerichte.md`, aber mit eigenen Typen (Make-ahead, Schnell, Warm/Frisch, Brot-basiert) und Haltbarkeitsangabe. Die meisten Frühstücks-Einträge haben kein Original-PDF, sondern enthalten ein Kurzrezept in der Notiz-Spalte – aus dem generiert der Skill in Phase 7 ein eigenes PDF.
 
-**T's PDF-Rezepteordner**: `C:\Users\tt-st\OneDrive\Rezepte` – Quelle der Wahrheit für die Original-Rezepte. Struktur: `Hauptgerichte/`, `Backen und Gebäck/`, `Suppen/`, `Aufläufe und Gratins/`, `Sammlungen/`, `Sonstiges/`. Wird nur punktuell geöffnet (für die ausgewählten Gerichte der Woche, oder wenn T ein Wunschgericht nennt, das im Index nicht steht).
+**T's PDF-Rezepteordner**: `Rezepte_Spiegel/` in Google Drive (IDs siehe oben) – Quelle der Wahrheit für die Original-Rezepte. Struktur: `Hauptgerichte/`, `Backen und Gebäck/`, `Suppen/`, `Aufläufe und Gratins/`, `Sammlungen/`, `Sonstiges/`. Wird nur punktuell geöffnet (für die ausgewählten Gerichte der Woche, oder wenn T ein Wunschgericht nennt, das im Index nicht steht).
 
 **Begleitdateien neben dieser SKILL.md** (lesen und pflegen):
 
@@ -33,14 +59,11 @@ Der Skill lernt mit: jedes Gericht, das T beim Ausführen nennt oder lobt, wande
 - `drei-tage-modus.md` – Ablauf für 3-Tage-Modus und Resteverwerter. Nur lesen, wenn einer dieser Modi gewählt ist.
 - `onlineshops.md` – Bezugsquellen für Nicht-Aldi-Zutaten (lokal und online).
 
-**Zustandsdateien in OneDrive** (lesen und pflegen, von T editierbar):
-
-- `C:\Users\tt-st\OneDrive\Rezepte\Kochlog.md` – was geplant, gekocht, bewertet wurde; offene Reste.
-- `C:\Users\tt-st\OneDrive\Rezepte\Vorrat.md` – Standardzutaten, die immer da sind und nicht auf die Einkaufsliste gehören.
+**Zustand in der Tabelle „Kochplan"** (siehe Ablageort): Blätter `Kochlog`, `Vorrat`, `Einkauf`.
 
 ## Pfade und Ablagestruktur
 
-T's Workspace-Struktur unter `C:\Users\tt-st\OneDrive\Rezepte\`:
+T's Workspace-Struktur in Google Drive unter `Rezepte_Spiegel/`:
 
 ```
 Rezepte/
@@ -48,8 +71,7 @@ Rezepte/
 ├── Backen und Gebäck/             ← Original-PDFs Backwaren
 ├── Suppen/, Aufläufe.../          ← weitere Kategorien
 └── Wochenpläne/                   ← Output-Ordner des Skills
-    ├── einkaufsliste_bring_KW18_2026.txt   ← BLEIBT FLACH (Python-Skript greift hier zu)
-    ├── einkaufsliste_bring_KW19_2026.txt
+    ├── einkaufsliste_bring_KW18_2026.txt   ← Altbestand (vor Umstellung auf Blatt „Einkauf")
     ├── ...
     └── KW18_2026/                          ← NEU: Wochenunterordner
         ├── einkaufsliste_KW18_2026.txt     ← strukturierte .txt-Liste
@@ -117,7 +139,7 @@ Stelle 7 Gerichte zusammen, die alle folgende Bedingungen erfüllen:
 
 **Wunschgerichte zuerst:** Wenn T konkrete Wunschgerichte genannt hat, diese fest einplanen und drum herum auffüllen. Wenn das Wunschgericht im Index existiert: dortigen Eintrag nutzen. Wenn nicht: ein passendes Rezept (≤ 30 Min, Aldi-tauglich) vorschlagen, mit Quellverweis (URL oder Eigenkonstruktion gekennzeichnet) liefern und in Phase 7 prüfen, ob es als neuer Index-Eintrag (`NE…`) ergänzt werden soll.
 
-**Keine Volltextsuche im Ordner.** Wenn ein Gericht außerhalb des Index gewünscht wird, einmal gezielt nach dem Dateinamen im Ordner schauen (Glob auf den Namen) – nicht alle PDFs lesen.
+**Keine Volltextsuche im Ordner.** Wenn ein Gericht außerhalb des Index gewünscht wird, einmal gezielt nach dem Dateinamen suchen (Drive-Suche `title contains '…'` mit `parentId` des Kategorienordners) – nicht alle PDFs lesen.
 
 #### 3b. Frühstücke (nur wenn aktiviert)
 
@@ -173,7 +195,7 @@ Direkt darunter: kurze Begründung, warum die Mischung so aussieht (1–2 Sätze
 
 Schreibe die strukturierte Einkaufsliste als `.txt`-Datei in den **Wochenunterordner**:
 
-`C:\Users\tt-st\OneDrive\Rezepte\Wochenpläne\KW[Nr]_[Jahr]\einkaufsliste_KW[Nr]_[Jahr].txt`
+`Rezepte_Spiegel/Wochenpläne/KW[Nr]_[Jahr]/einkaufsliste_KW[Nr]_[Jahr].txt` (Wochenordner per Drive-Connector als Ordner unter der Wochenpläne-ID anlegen)
 
 Wenn der Wochenunterordner noch nicht existiert, beim ersten Schreibvorgang anlegen. Wenn der übergeordnete `Wochenpläne/`-Ordner noch nicht existiert (sehr unwahrscheinlich, aber möglich), beim ersten Schreibvorgang ebenfalls anlegen.
 
@@ -182,18 +204,26 @@ Format siehe `einkaufsliste-template.txt`. Wesentliche Eigenschaften:
 - Eine Mengenspalte für die in Phase 1 gewählte Personenzahl (Spaltenkopf benennen, z. B. „4 P"). Wenn Frühstücks-Personenzahl abweicht: Frühstücks-Sektion mit eigener Personenzahl-Markierung, z. B. „Frühstück 1 P".
 - Mengen sinnvoll konsolidieren (wenn drei Rezepte je eine Zwiebel brauchen, steht „3 Zwiebeln")
 - Eigene Sektion am Ende für „Nicht-Aldi" mit Hinweis, wo T es bekommt
-- Sektion „Vermutlich vorrätig (bitte prüfen)" für Standardzutaten, getrennt von der Kaufliste. Quelle dafür ist `Vorrat.md` in OneDrive: Positionen ohne `(knapp)`/`(leer)` stehen hier, Positionen mit `(knapp)`/`(leer)` wandern in die Kaufliste.
+- Sektion „Vermutlich vorrätig (bitte prüfen)" für Standardzutaten, getrennt von der Kaufliste. Quelle dafür ist das Blatt `Vorrat`: Positionen mit Status `da` stehen hier, Positionen mit `knapp`/`leer` wandern in die Kaufliste.
 - Hochrechnung auf alternative Personenzahl nur, wenn T danach fragt – als zusätzliche Spalte oder zweites Dokument.
 
-Nach dem Schreiben den Pfad als computer://-Link an T melden.
+Nach dem Schreiben den Drive-Link an T melden.
 
-### Phase 6b – Bring!-Import-Liste (BLEIBT FLACH in `Wochenpläne/`)
+### Phase 6b – Bring!-Liste ins Blatt `Einkauf`
 
-Schreibe parallel eine zweite, Bring!-taugliche Plain-Liste **direkt** in den Wochenpläne-Ordner (nicht in den Wochenunterordner!), weil T's Python-Skript dort sucht:
+Hänge die Bring!-taugliche Liste als Zeilen an das Blatt `Einkauf` der Tabelle „Kochplan" an (Sheets-Connector, Anhängen ab `Einkauf!A1`). Eine Zeile pro Artikel:
 
-`C:\Users\tt-st\OneDrive\Rezepte\Wochenpläne\einkaufsliste_bring_KW[Nr]_[Jahr].txt`
+| Artikel | Angaben | Laden | Für | Status | Angelegt |
+|---|---|---|---|---|---|
+| Paprika | rot 1 Stk | Aldi | KW43 | neu | 2026-10-22 |
 
-**Format-Regeln (verifiziert über Bring! Developer Guide; das Share-Sheet-Verhalten ist nicht offiziell dokumentiert – T testet beim ersten Mal):**
+- **Artikel** = Grundzutat (der Teil vor der Klammer im Schema unten), **Angaben** = Klammerinhalt ohne Klammern. Bring! zeigt die Angaben als Notiz am Artikel.
+- **Laden** = Name der Bring!-Liste: `Aldi` (Standard), `DM` (Drogerie) oder `Woanders` (alles aus der Nicht-Aldi-Sektion; die Bezugsquelle aus `onlineshops.md` gehört dann in die Angaben, z. B. `2 Pck – Asialaden`).
+- **Für** = `KW[Nr]` beim Wochenplan, `3T` beim 3-Tage-Modus, `Reste` beim Resteverwerter.
+- **Status** immer `neu`, **Angelegt** = heutiges Datum.
+- Zusätzlich eine .txt-Datei ist nicht nötig; nur auf Wunsch von T.
+
+**Format-Regeln für Artikel und Angaben** (das Schema `<Grundzutat> (<Angaben>)` entspricht einer Zeile):
 
 - Eine Zeile pro Item.
 - Schema pro Zeile: `<Grundzutat> (<Merkmale> <Menge> <Einheit>)`. Vor der Klammer steht **ausschließlich** die Grundzutat als reines Substantiv. Alle beschreibenden Merkmale (Farbe, Form, TK/frisch, Sorte, Schnitt, Fettgehalt, Reifegrad usw.) wandern gemeinsam mit Menge und Einheit in die Klammer. Bring! interpretiert den Klammertext als Notiz am Item; identische Grundzutaten in verschiedenen Varianten matchen damit auf demselben Bring!-Eintrag.
@@ -205,13 +235,13 @@ Schreibe parallel eine zweite, Bring!-taugliche Plain-Liste **direkt** in den Wo
   - `Sahne (30 % 200 ml)` – Fettgehalt als Merkmal in der Klammer
   - `Zwiebeln (4 Stk)` – keine Merkmale, nur Menge
 - Mengeneinheiten kompakt abkürzen: `Stk` (nicht „Stück"), `g`, `kg`, `ml`, `l`, `EL`, `TL`, `Pck` (Packung), `Bd` (Bund), `Dose`, `Glas`. Innerhalb der Klammer steht zuerst das/die Merkmal(e), dann ein Leerzeichen, dann Menge + Einheit.
-- Keine Sektions-Trenner, keine Kommentare, keine Leerzeilen, keine Aufzählungszeichen. Reine Item-Liste.
+- Keine Sektions-Trenner, keine Kommentar- oder Leerzeilen im Blatt. Nur Artikelzeilen.
 - Reihenfolge: identisch zur strukturierten Liste (Obst/Gemüse → Kühlregal → Trocken → TK → Backwaren → Fleisch/Fisch → **Frühstück falls aktiviert** → Sonstiges → Nicht-Aldi). Vorrats-Sektion („vermutlich vorrätig") **nicht** mit übernehmen – die soll T nicht in Bring! haben.
 - Frühstücks-Items werden in die thematisch passenden Sektionen einsortiert (Haferflocken → Trocken, Skyr → Kühlregal, TK-Beeren → Tiefkühl), nicht als eigene Sektion. Auf Item-Ebene kein Unterschied zwischen Mittag/Abend und Frühstück.
 - Ein Item = ein Eintrag, ohne 2P/4P-Spalten. Es wird die in Phase 1 gewählte Personenzahl genommen.
 - Grundzutat (vor der Klammer) so kompakt wie möglich, damit sie in Bring!s Item-Anzeige nicht abgeschnitten wird (Faustregel: max. ~25 Zeichen für den Teil vor der Klammer).
 
-Nach dem Schreiben den Pfad ebenfalls als computer://-Link an T melden.
+Danach in einem Satz melden, wie viele Artikel im Blatt `Einkauf` stehen; das Apps Script überträgt sie automatisch (läuft zeitgesteuert, kein Zutun von T).
 
 ### Phase 7 – Rezept-PDFs in Wochenordner ablegen
 
@@ -280,13 +310,13 @@ So hat T eine textuelle Übersicht, falls er die Chat-Ausgabe nicht zur Hand hat
 #### Bestätigung an T
 
 Nach Phase 7 melde an T:
-- Pfad zum Wochenordner als computer://-Link
+- Drive-Link zum Wochenordner
 - Anzahl kopierter Original-PDFs / Anzahl neu generierter PDFs
 - Hinweis, falls eine PDF-Generierung fehlgeschlagen ist (z. B. URL nicht erreichbar) – in dem Fall mit Vorschlag, was T tun kann.
 
 ### Phase 8 – Pflege der Wissensbasis (nach Plan, vor Verabschiedung)
 
-Die Gerichte des Wochenplans mit Datum und Status `geplant` oben in `Kochlog.md` eintragen, damit der 3-Tage-Modus und die Nachfrage „gekocht?" darauf aufbauen.
+Die Gerichte des Wochenplans mit Datum und Status `geplant` an das Blatt `Kochlog` anhängen, damit der 3-Tage-Modus und die Nachfrage „gekocht?" darauf aufbauen.
 
 Falls in dieser Woche neue Gerichte / Frühstücke aufgenommen wurden:
 

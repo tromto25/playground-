@@ -1,25 +1,22 @@
 # Kochplan: 3-Tage-Modus und Resteverwerter einrichten
 
-## 1. OneDrive-Dateien anlegen
-`onedrive-Rezepte/Vorrat.md` und `onedrive-Rezepte/Kochlog.md` nach
-`C:\Users\tt-st\OneDrive\Rezepte\` kopieren. `Vorrat.md` einmal durchgehen
-(streichen und ergänzen, ca. 5 Min).
+Alles läuft über Google Drive (`Rezepte_Spiegel/`) und die Tabelle „Kochplan" dort.
 
-## 2. Plugin aktualisieren
-Der Ordner `alltag/` ist das vollständige Plugin `alltag` in Version 1.1.0.
-`alltag.zip` enthält dasselbe als Zip zum Hochladen. Es ersetzt die bisherige
-Version 1.0.0 dort, wo du das Plugin verwaltest.
+## 1. Vorrat prüfen (5 Min)
+In der Tabelle „Kochplan" das Blatt **Vorrat** durchgehen: streichen, was du nicht immer
+da hast, ergänzen, was fehlt. Status `da` / `knapp` / `leer`.
 
-Neu bzw. geändert in `skills/kochplan-woche/`:
-- `drei-tage-modus.md` (neu): 3-Tage-Modus und Resteverwerter
-- `onlineshops.md` (neu): Bezugsquellen für Nicht-Aldi-Zutaten
-- `SKILL.md`: Moduswahl, Trigger, Verweise auf Kochlog und Vorrat
+## 2. Bring!-Anbindung (5 Min)
+Im Apps-Script-Projekt **BringBridge**:
+1. Links „Dateien" → „+" → „Skript", Name `Kochplan`, Inhalt von `BringBridge/Kochplan.gs` einfügen, speichern.
+2. Oben die Funktion `kochplanEinrichten` auswählen → „Ausführen" → Zugriff auf Google Sheets erlauben.
+3. Im Protokoll steht „Zeitauslöser angelegt" und „Keine neuen Artikel" – fertig.
 
-## 3. Bring!-Skript prüfen
-Die 3-Tage-Listen heißen `einkaufsliste_bring_3T_YYYY-MM-DD.txt`, die Reste-Listen
-`einkaufsliste_bring_reste_YYYY-MM-DD.txt`, beide flach in `Wochenpläne\`.
-Sucht dein Skript nur nach `einkaufsliste_bring_KW*`, das Muster auf
-`einkaufsliste_bring_*` erweitern.
+Ab dann landen Zeilen mit Status `neu` aus dem Blatt **Einkauf** alle 10 Minuten in Bring!
+(Liste laut Spalte „Laden": Aldi, DM oder Woanders). Du kannst dort auch selbst Zeilen eintragen.
+
+## 3. Plugin aktualisieren
+`alltag.zip` (Plugin `alltag` 1.1.0) als neue Version hochladen; ersetzt 1.0.0.
 
 ## Nutzung
 - „Was koche ich die nächsten Tage?" → 3 Tage × 2 Optionen, antworten mit z. B. „A B B"

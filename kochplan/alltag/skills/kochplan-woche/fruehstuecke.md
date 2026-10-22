@@ -16,7 +16,7 @@ Pool für die Frühstücks-Auswahl. Logik analog zu `standardgerichte.md`: der S
 - **Vegi:** ja/nein – falls T mal eine vegane Frühstückswoche will, hilfreich.
 - **Aldi:** grün/gelb/rot – Aldi-Süd-Tauglichkeit nach `aldi_sortiment.md`. Gelb/rot = Skill rückfragt.
 - **Status:** `standard` / `wunsch` / `neu` / `pause` / `nein`. Logik wie in `standardgerichte.md`.
-- **PDF:** Dateiname relativ zu `C:\Users\tt-st\OneDrive\Rezepte\` (falls vorhanden), sonst leer → Skill generiert beim Wochenplan ein PDF aus der Rezeptzusammenfassung in dieser Tabelle.
+- **PDF:** Dateiname relativ zu `Rezepte_Spiegel/` in Google Drive (Ordner-IDs in `SKILL.md`, Abschnitt Ablageort) (falls vorhanden), sonst leer → Skill generiert beim Wochenplan ein PDF aus der Rezeptzusammenfassung in dieser Tabelle.
 - **Notiz / Kurzrezept:** knappes Rezept (Zutaten + Zubereitung), reicht als Quelle für PDF-Generierung.
 
 ## Pool – Make-ahead (vorbereiten, hält mehrere Tage)
