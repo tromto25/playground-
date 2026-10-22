@@ -1,6 +1,6 @@
 # Kochplan: 3-Tage-Modus und Resteverwerter einrichten
 
-Alles läuft über Google Drive (`Rezepte_Spiegel/`) und die Tabelle „Kochplan" dort.
+Alles läuft über Google Drive (Ordner `Rezepte/`) und die Tabelle „Kochplan" dort. Rezepte-Index, Frühstücke, Wünsche, Kochlog, Vorrat und Einkauf sind Blätter dieser Tabelle. OneDrive ist nur noch Archiv.
 
 ## 1. Vorrat prüfen (5 Min)
 In der Tabelle „Kochplan" das Blatt **Vorrat** durchgehen: streichen, was du nicht immer

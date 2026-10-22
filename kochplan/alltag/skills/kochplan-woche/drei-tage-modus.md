@@ -19,7 +19,7 @@ ID `1EGEHyF_lTqhfWEcc2dxYU_lEojisyQSVM41iFYrhi-Q`, Zugriff über den Google-Shee
 - **Status:** `geplant` → `gekocht` / `getauscht` (Gericht durch das tatsächlich gekochte ersetzen, Notiz „statt X") / `ausgefallen`.
 - **Bewertung:** `++` (gerne öfter), `+` (gut), `-` (nicht nochmal), leer = keine Angabe.
 - **Reste:** frei, kurz. Verbrauchte Reste löschen und in die Notiz „Rest verwertet am …" schreiben.
-- **ID:** Index-ID aus `standardgerichte.md`, bei Neuentdeckungen `NEU`.
+- **ID:** ID aus dem Blatt `Rezepte`, bei Neuentdeckungen `NEU`.
 
 ### Blatt `Vorrat`
 
@@ -39,12 +39,12 @@ Lies `Kochlog`. Für alle Zeilen mit Status `geplant` und Datum vor heute (bzw. 
 
 > Seit dem letzten Mal: Mo Gnocchi, Di Lachs. Wenn nichts kommt, nehme ich an: beides gekocht, keine Bewertung, keine Reste. Abweichungen, 👍/👎 oder Reste? (z. B. „Di getauscht gegen Pizza, Gnocchi ++, Rest: halber Brokkoli")
 
-Antwortet T nur mit „passt", „ok" oder geht direkt zur Auswahl über: Status auf `gekocht` setzen, sonst nichts. Bewertungen zusätzlich wie bisher spiegeln: `++` → `wunschrezepte.md` „Lieblingsgerichte", `-` → „Nicht nochmal".
+Antwortet T nur mit „passt", „ok" oder geht direkt zur Auswahl über: Status auf `gekocht` setzen, sonst nichts. Bewertungen zusätzlich im Blatt `Wünsche` spiegeln: `++` → Zeile mit Art `Lieblingsgericht`, `-` → Art `Nicht nochmal`.
 
 ### Schritt 2 – Kontext einlesen
 
 - `Kochlog`: letzte 14 Tage (Wiederholungen, Kategorien, Bewertungen), offene Reste, zuletzt genutzte Personenzahl (Default 2; nur fragen, wenn T etwas anderes andeutet).
-- `standardgerichte.md`, `wunschrezepte.md`, `aldi_sortiment.md` wie in Phase 2 des Wochenplans.
+- Blätter `Rezepte` und `Wünsche` sowie `aldi_sortiment.md` wie in Phase 2 des Wochenplans.
 - `Vorrat`.
 
 ### Schritt 3 – Vorschlag: 3 Tage × 2 Optionen
@@ -89,8 +89,8 @@ T antwortet z. B. „A B B". Dann ohne weitere Bestätigung:
 ### Schritt 5 – Kochlog und Rezepte pflegen
 
 - Die drei gewählten Gerichte mit Datum, Status `geplant` und Personenzahl an `Kochlog` anhängen.
-- **Neuentdeckungen** (NEU), die gewählt wurden: Rezept als PDF im Standardlayout aus Phase 7b erzeugen und per Drive-Connector im Ordner Hauptgerichte (ID `1dKds_LZi_zHPsPuw91U2vpXDx1-G_Asz`) als `NE_[GerichtKurz].pdf` anlegen, außerdem eine Zeile in `standardgerichte.md` (Sektion Neuentdeckungen, Status `neu`) ergänzen. So wächst der Rezepteordner von selbst. Den Drive-Link des PDFs in die Notiz-Spalte des Kochlogs schreiben.
-- Wird ein `neu`-Gericht mit `++`/`+` bewertet, Status in `standardgerichte.md` auf `standard` setzen.
+- **Neuentdeckungen** (NEU), die gewählt wurden: Rezept als PDF im Standardlayout aus Phase 7b erzeugen und per Drive-Connector im Ordner Hauptgerichte (ID `1dKds_LZi_zHPsPuw91U2vpXDx1-G_Asz`) als `NE_[GerichtKurz].pdf` anlegen, außerdem eine Zeile im Blatt `Rezepte` anhängen (Gruppe `Neuentdeckung`, Status `neu`, Datei = `Hauptgerichte/NE_[GerichtKurz].pdf`). So wächst der Rezepteordner von selbst. Den Drive-Link des PDFs in die Notiz-Spalte des Kochlogs schreiben.
+- Wird ein `neu`-Gericht mit `++`/`+` bewertet, Status in Blatt `Rezepte` auf `standard` setzen.
 
 ### Schritt 6 – Rollieren
 

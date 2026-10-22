@@ -1,6 +1,6 @@
 ---
 name: kochplan-woche
-description: Kochplanung für T aus seinem Rezepteordner (Google Drive, Rezepte_Spiegel) im HF-Stil, Rezepte ≤ 30 Min, Aldi-Abgleich, Einkaufsliste im Bring!-Format. Drei Modi: (1) Wochenplan Mo–So mit Personenzahl-Abfrage, optional Frühstück, Rezept-PDFs im Wochenordner, Kochmodus; (2) 3-Tage-Modus: rollierend je zwei Vorschläge pro Tag nach Geschmack und Kochlog, nach Wahl sofort Bring!-Liste; (3) Resteverwerter aus Resten und Vorrat. IMMER nutzen bei „Kochplan", „Wochenplan", „Wochenmenü", „Speiseplan", „Essensplan", „Einkaufsliste Woche", „Frühstück planen", „nächste 3 Tage", „was koche ich die nächsten Tage", „Kochvorschlag", „neue Vorschläge", „Reste", „Resteverwertung", „was ist übrig", „was koche ich aus", bei „koch heute" / „los geht's mit X" im laufenden Plan und beim Fortsetzen. Nicht bei einzelnen Rezeptfragen ohne Planungs- oder Restebezug.
+description: Kochplanung für T aus seinem Rezepteordner (Google Drive, Ordner Rezepte) im HF-Stil, Rezepte ≤ 30 Min, Aldi-Abgleich, Einkaufsliste im Bring!-Format. Drei Modi: (1) Wochenplan Mo–So mit Personenzahl-Abfrage, optional Frühstück, Rezept-PDFs im Wochenordner, Kochmodus; (2) 3-Tage-Modus: rollierend je zwei Vorschläge pro Tag nach Geschmack und Kochlog, nach Wahl sofort Bring!-Liste; (3) Resteverwerter aus Resten und Vorrat. IMMER nutzen bei „Kochplan", „Wochenplan", „Wochenmenü", „Speiseplan", „Essensplan", „Einkaufsliste Woche", „Frühstück planen", „nächste 3 Tage", „was koche ich die nächsten Tage", „Kochvorschlag", „neue Vorschläge", „Reste", „Resteverwertung", „was ist übrig", „was koche ich aus", bei „koch heute" / „los geht's mit X" im laufenden Plan und beim Fortsetzen. Nicht bei einzelnen Rezeptfragen ohne Planungs- oder Restebezug.
 ---
 
 # Kochplan-Woche
@@ -13,7 +13,7 @@ Die Rezepte einer Woche werden als PDF-Sammlung in einen Wochenunterordner kopie
 
 Neben dem Wochenplan gibt es einen **3-Tage-Modus** (rollierend, je zwei Optionen pro Tag, mit Kochlog und Vorratsabgleich) und einen **Resteverwerter**. Beide sind in `drei-tage-modus.md` beschrieben.
 
-Der Skill lernt mit: jedes Gericht, das T beim Ausführen nennt oder lobt, wandert in die Datei `wunschrezepte.md`, sodass der Pool über die Wochen wächst. Dasselbe gilt für Frühstücke.
+Der Skill lernt mit: jedes Gericht, das T beim Ausführen nennt oder lobt, wandert ins Blatt `Wünsche` der Tabelle „Kochplan", sodass der Pool über die Wochen wächst. Dasselbe gilt für Frühstücke.
 
 ## Ablageort: Google Drive
 
@@ -21,17 +21,17 @@ Alle Dateien liegen in T's Google Drive. **Google Drive ist die einzige Arbeitsa
 
 | Was | Name in Drive | ID |
 |---|---|---|
-| Rezepte-Wurzel | `Rezepte_Spiegel/` | `1vtkCobEu4EfhAnqaOJoSIzIbhKuNFpgt` |
-| Hauptgerichte | `Rezepte_Spiegel/Hauptgerichte/` | `1dKds_LZi_zHPsPuw91U2vpXDx1-G_Asz` |
-| Aufläufe und Gratins | `Rezepte_Spiegel/Aufläufe und Gratins/` | `1Dw8lntvv7rJhOYtr3bPgUZ45pguqlxH_` |
-| Suppen | `Rezepte_Spiegel/Suppen/` | `1YLkKwVYOksWEXnSpV81R0tS28jUULqzG` |
-| Backen und Gebäck | `Rezepte_Spiegel/Backen und Gebäck/` | `19oFvuA07KCld1FU6wSGXwo--uyCETVbf` |
-| Sammlungen | `Rezepte_Spiegel/Sammlungen/` | `1Z9xEdZNLr2ex6e9sTbg23Ta5MKJG53WP` |
-| Sonstiges | `Rezepte_Spiegel/Sonstiges/` | `1xDP0nbb8yRj13W1QarmOtjg1o8e_oiF1` |
-| Wochenpläne (Output) | `Rezepte_Spiegel/Wochenpläne/` | `1wUbSoDLHEiJXbKGcS3C9Tb5VFosCh8yr` |
-| Tabelle „Kochplan" | `Rezepte_Spiegel/Kochplan` | `1EGEHyF_lTqhfWEcc2dxYU_lEojisyQSVM41iFYrhi-Q` |
+| Rezepte-Wurzel | `Rezepte/` | `1vtkCobEu4EfhAnqaOJoSIzIbhKuNFpgt` |
+| Hauptgerichte | `Rezepte/Hauptgerichte/` | `1dKds_LZi_zHPsPuw91U2vpXDx1-G_Asz` |
+| Aufläufe und Gratins | `Rezepte/Aufläufe und Gratins/` | `1Dw8lntvv7rJhOYtr3bPgUZ45pguqlxH_` |
+| Suppen | `Rezepte/Suppen/` | `1YLkKwVYOksWEXnSpV81R0tS28jUULqzG` |
+| Backen und Gebäck | `Rezepte/Backen und Gebäck/` | `19oFvuA07KCld1FU6wSGXwo--uyCETVbf` |
+| Sammlungen | `Rezepte/Sammlungen/` | `1Z9xEdZNLr2ex6e9sTbg23Ta5MKJG53WP` |
+| Sonstiges | `Rezepte/Sonstiges/` | `1xDP0nbb8yRj13W1QarmOtjg1o8e_oiF1` |
+| Wochenpläne (Output) | `Rezepte/Wochenpläne/` | `1wUbSoDLHEiJXbKGcS3C9Tb5VFosCh8yr` |
+| Tabelle „Kochplan" | `Rezepte/Kochplan` | `1EGEHyF_lTqhfWEcc2dxYU_lEojisyQSVM41iFYrhi-Q` |
 
-**Tabelle „Kochplan"** (Google Sheet, von T am Handy editierbar) mit drei Blättern:
+**Tabelle „Kochplan"** (Google Sheet, von T am Handy editierbar) mit den Blättern `Rezepte`, `Frühstücke`, `Wünsche` (Aufbau in `tabelle-kochplan.md`) sowie:
 
 - `Kochlog` – Spalten: Datum (YYYY-MM-DD) | Gericht | ID | Status | Bewertung | Reste | Personen | Notiz. Neue Zeilen per Anhängen; Status-Änderungen per Zellen-Update.
 - `Vorrat` – Spalten: Zutat | Bereich | Status (`da` / `knapp` / `leer`). Nur `da` gilt als vorrätig.
@@ -43,17 +43,19 @@ Alle Dateien liegen in T's Google Drive. **Google Drive ist die einzige Arbeitsa
 
 ## Wissensbasis
 
-**Primärer Auswahl-Pool Hauptmahlzeiten: `standardgerichte.md`** (Index neben dieser SKILL.md). Diese Datei enthält alle vorgeprüften Rezepte aus T's Ordner mit Spalten für Kategorie, Zeit, Vegi-Flag, Aldi-Tauglichkeit, Status und PDF-Pfad. **Beim Vorschlag immer zuerst diesen Index lesen, nicht den ganzen PDF-Ordner durchsuchen.** PDFs werden erst geöffnet, wenn ein Gericht für die Woche ausgewählt ist und der Skill in Phase 6 die genauen Zutaten und Mengen für die Einkaufsliste extrahieren muss bzw. in Phase 7 das PDF in den Wochenordner kopiert.
+**Auswahl-Pools und Lernspeicher liegen in der Tabelle „Kochplan"** (ID oben; Spalten, Status-Werte und Auswahl-Hinweise in `tabelle-kochplan.md`):
 
-**Primärer Auswahl-Pool Frühstücke: `fruehstuecke.md`** (Index neben dieser SKILL.md). Strukturell analog zu `standardgerichte.md`, aber mit eigenen Typen (Make-ahead, Schnell, Warm/Frisch, Brot-basiert) und Haltbarkeitsangabe. Die meisten Frühstücks-Einträge haben kein Original-PDF, sondern enthalten ein Kurzrezept in der Notiz-Spalte – aus dem generiert der Skill in Phase 7 ein eigenes PDF.
+- Blatt `Rezepte` – Index aller Hauptgerichte aus T's Ordner plus Neuentdeckungen (Spalten u. a. Kategorie, Zeit, Vegi, Aldi, Status, Datei, Gruppe). **Primärer Auswahl-Pool Hauptmahlzeiten. Beim Vorschlag immer zuerst dieses Blatt lesen, nicht den PDF-Ordner durchsuchen.** PDFs werden erst geöffnet, wenn ein Gericht ausgewählt ist und die Zutaten für die Einkaufsliste gebraucht werden bzw. das PDF in den Wochenordner kopiert wird. Pflegen: neue Rezepte anhängen, Status anpassen (standard/wunsch/neu/pause/nein), Zeit-/Aldi-Werte korrigieren.
+- Blatt `Frühstücke` – analog für Frühstücke, mit Typ (Make-ahead, Schnell, Warm/Frisch, Brot-basiert), Haltbarkeit und Kurzrezept, aus dem der Skill bei Bedarf ein PDF erzeugt.
+- Blatt `Wünsche` – T's Lieblingsgerichte, kurzfristige Wünsche, Bewertungen, Ablehnungen und allgemeine Präferenzen (Mittag/Abend und Frühstück), unterschieden über die Spalte „Art". Vor jedem Plan lesen, danach ergänzen.
 
-**T's PDF-Rezepteordner**: `Rezepte_Spiegel/` in Google Drive (IDs siehe oben) – Quelle der Wahrheit für die Original-Rezepte. Struktur: `Hauptgerichte/`, `Backen und Gebäck/`, `Suppen/`, `Aufläufe und Gratins/`, `Sammlungen/`, `Sonstiges/`. Wird nur punktuell geöffnet (für die ausgewählten Gerichte der Woche, oder wenn T ein Wunschgericht nennt, das im Index nicht steht).
+Diese Blätter werden per Sheets-Connector gelesen und gepflegt (Zeilen anhängen, einzelne Zellen ändern), nie als Datei neben dieser SKILL.md.
 
-**Begleitdateien neben dieser SKILL.md** (lesen und pflegen):
+**T's PDF-Rezepteordner**: `Rezepte/` in Google Drive (IDs siehe oben) – Quelle der Wahrheit für die Original-Rezepte. Struktur: `Hauptgerichte/`, `Backen und Gebäck/`, `Suppen/`, `Aufläufe und Gratins/`, `Sammlungen/`, `Sonstiges/`. Wird nur punktuell geöffnet (für die ausgewählten Gerichte, oder wenn T ein Wunschgericht nennt, das nicht im Blatt `Rezepte` steht).
 
-- `standardgerichte.md` – Rezept-Index Hauptmahlzeiten, Quelle der Wahrheit für den Auswahl-Pool. Pflegen: neue Rezepte ergänzen, Status anpassen (standard/wunsch/neu/pause/nein), Zeit-/Aldi-Werte korrigieren.
-- `fruehstuecke.md` – Rezept-Index Frühstücke. Logik analog. Pflegen: neue Frühstücke ergänzen, Status anpassen, Bewertungen aus „neu" → „standard" überführen, wenn T sie gut fand.
-- `wunschrezepte.md` – T's wachsende Liste von Lieblingsgerichten, kurzfristigen Wünschen und Bewertungen (sowohl Mittag/Abend als auch Frühstück). Vor jedem Plan einlesen, nach jedem Plan ergänzen.
+**Begleitdateien neben dieser SKILL.md** (nur lesen; Änderungen nimmt T über ein Plugin-Update vor):
+
+- `tabelle-kochplan.md` – Aufbau aller Blätter der Tabelle „Kochplan", Status-Werte, Auswahl-Hinweise.
 - `aldi_sortiment.md` – Heuristik, was bei Aldi (Süd) regelmäßig erhältlich ist. Vor dem finalen Vorschlag gegen die Zutatenlisten prüfen.
 - `einkaufsliste-template.txt` – Vorlage für das Output-Format der Einkaufsliste, inkl. Frühstücks-Sektion.
 - `drei-tage-modus.md` – Ablauf für 3-Tage-Modus und Resteverwerter. Nur lesen, wenn einer dieser Modi gewählt ist.
@@ -63,7 +65,7 @@ Alle Dateien liegen in T's Google Drive. **Google Drive ist die einzige Arbeitsa
 
 ## Pfade und Ablagestruktur
 
-T's Workspace-Struktur in Google Drive unter `Rezepte_Spiegel/`:
+T's Workspace-Struktur in Google Drive unter `Rezepte/`:
 
 ```
 Rezepte/
@@ -110,17 +112,16 @@ Wenn T zu einer dieser Fragen nichts sagt, gilt der Default. Nicht jede Frage ei
 
 ### Phase 2 – Indizes und Wunschrezepte einlesen
 
-**Hauptmahlzeiten:** Lies `standardgerichte.md` als kompletten Auswahl-Pool. Filtere die Tabellen-Zeilen mit Status `standard`, `wunsch` oder (selten) `neu` und Zeit ≤ 30 Min. Merke dir pro Eintrag: ID, Gericht, Kategorie, Vegi-Flag, Aldi-Status, PDF-Pfad. Den PDF-Inhalt **nicht** öffnen.
+**Hauptmahlzeiten:** Lies Blatt `Rezepte` als kompletten Auswahl-Pool. Filtere die Tabellen-Zeilen mit Status `standard`, `wunsch` oder (selten) `neu` und Zeit ≤ 30 Min. Merke dir pro Eintrag: ID, Gericht, Kategorie, Vegi-Flag, Aldi-Status, PDF-Pfad. Den PDF-Inhalt **nicht** öffnen.
 
-**Frühstücke (nur wenn in Phase 1 aktiviert):** Lies `fruehstuecke.md`. Filtere analog auf Status `standard`, `wunsch`, `neu`. Merke dir pro Eintrag: ID, Frühstück, Typ (Make-ahead / Schnell / Warm-Frisch / Brot-basiert), Aldi-Status, PDF-Pfad (oft leer), Kurzrezept.
+**Frühstücke (nur wenn in Phase 1 aktiviert):** Lies Blatt `Frühstücke`. Filtere analog auf Status `standard`, `wunsch`, `neu`. Merke dir pro Eintrag: ID, Frühstück, Typ (Make-ahead / Schnell / Warm-Frisch / Brot-basiert), Aldi-Status, PDF-Pfad (oft leer), Kurzrezept.
 
-**Wunschrezepte:** Lies `wunschrezepte.md` und merke dir:
-- T's Lieblingskategorien
-- konkrete kurzfristige Wünsche (Sektion „Wunschgerichte (T möchte diese Woche / demnächst)" und „Frühstücks-Wünsche")
-- explizit als „neu probiert, gut" markierte Gerichte/Frühstücke
-- explizit als „nicht nochmal" markierte Gerichte
-
-Treffer aus beiden Listen abgleichen: Gerichte aus dem Index, deren Name in „Nicht nochmal" steht, aus dem Auswahl-Pool entfernen. Gerichte aus „Lieblingsgerichte" oder „Wunschgerichte", die im Index existieren, werden in Phase 3 priorisiert.
+**Wünsche:** Lies Blatt `Wünsche` und merke dir nach Spalte „Art":
+- `Lieblingsgericht` / `Frühstücks-Liebling` → in Phase 3 priorisieren
+- `Wunsch` / `Frühstücks-Wunsch` → kurzfristige Wünsche, fest einplanen
+- `Neu probiert` mit Bewertung `+`/`++` → gerne wieder
+- `Nicht nochmal` → aus dem Auswahl-Pool entfernen
+- `Präferenz` / `Frühstücks-Notiz` → allgemeine Regeln für die Auswahl
 
 ### Phase 3 – Vorschlag zusammenstellen
 
@@ -128,22 +129,22 @@ Treffer aus beiden Listen abgleichen: Gerichte aus dem Index, deren Name in „N
 
 Stelle 7 Gerichte zusammen, die alle folgende Bedingungen erfüllen:
 
-**Hartes Kriterium – Zeit:** Nur Gerichte mit Zeit ≤ 30 Min aus dem Index. Sonderfälle aus der Tabelle „Sonderfälle" nur dann, wenn T explizit eine Schnellkoch-Variante benennt – sonst ignorieren.
+**Hartes Kriterium – Zeit:** Nur Gerichte mit Zeit ≤ 30 Min aus dem Index. Zeilen mit Gruppe `Sonderfall` nur dann, wenn T explizit eine Schnellkoch-Variante benennt – sonst ignorieren.
 
 **Mischungsregel – Quellen:**
-- 4–5 Gerichte aus dem Index (`standardgerichte.md`, Status `standard`)
+- 4–5 Gerichte aus dem Index (Blatt `Rezepte`, Status `standard`)
 - 1–2 echte Neuentdeckungen pro Woche („Überraschungs-Slot") – diese im HF-Stil-Eigen erfinden, kein PDF erwartet, wird in Phase 7 generiert
-- 0–1 ausdrücklicher Wunsch aus `wunschrezepte.md`, falls T einen genannt hat
+- 0–1 ausdrücklicher Wunsch aus Blatt `Wünsche`, falls T einen genannt hat
 
 **Abwechslungsregel – Anti-Monotonie:** Keine zwei direkt aufeinander folgenden Tage in derselben Kategorie. Kategorien siehe Index-Spalte „Kategorie". Über die Woche hinweg sollten mind. 4 verschiedene Kategorien vorkommen, mind. 2 Gerichte vegetarisch sein (Vegi-Flag im Index nutzen).
 
-**Wunschgerichte zuerst:** Wenn T konkrete Wunschgerichte genannt hat, diese fest einplanen und drum herum auffüllen. Wenn das Wunschgericht im Index existiert: dortigen Eintrag nutzen. Wenn nicht: ein passendes Rezept (≤ 30 Min, Aldi-tauglich) vorschlagen, mit Quellverweis (URL oder Eigenkonstruktion gekennzeichnet) liefern und in Phase 7 prüfen, ob es als neuer Index-Eintrag (`NE…`) ergänzt werden soll.
+**Wunschgerichte zuerst:** Wenn T konkrete Wunschgerichte genannt hat, diese fest einplanen und drum herum auffüllen. Wenn das Wunschgericht im Index existiert: dortigen Eintrag nutzen. Wenn nicht: ein passendes Rezept (≤ 30 Min, Aldi-tauglich) vorschlagen, mit Quellverweis (URL oder Eigenkonstruktion gekennzeichnet) liefern und in Phase 7 prüfen, ob es als neue Zeile im Blatt `Rezepte` (`NE…`) ergänzt werden soll.
 
 **Keine Volltextsuche im Ordner.** Wenn ein Gericht außerhalb des Index gewünscht wird, einmal gezielt nach dem Dateinamen suchen (Drive-Suche `title contains '…'` mit `parentId` des Kategorienordners) – nicht alle PDFs lesen.
 
 #### 3b. Frühstücke (nur wenn aktiviert)
 
-**Default-Routine (entspricht T's Wunsch in `wunschrezepte.md`):**
+**Default-Routine (entspricht T's Wunsch in Blatt `Wünsche`):**
 - **Mo–Mi:** eine Make-ahead-Variante (FR01–FR09)
 - **Do–Fr:** eine zweite, anders typisierte Make-ahead-Variante
 - **Sa–So:** eine Warm/Frisch-Variante (FR16–FR19)
@@ -152,7 +153,7 @@ Stelle 7 Gerichte zusammen, die alle folgende Bedingungen erfüllen:
 
 **Anti-Monotonie:** Die zwei Make-ahead-Varianten sollen sich strukturell unterscheiden, also nicht zweimal Overnight Oats. Beispiel ok: Overnight Oats (FR01) + Bircher (FR03). Beispiel zu monoton: Overnight Oats Banane (FR01) + Overnight Oats Beere (FR02).
 
-**Variation:** Pro Aufruf möglichst eine andere Kombination als in der Vorwoche (sofern aus `wunschrezepte.md` ablesbar – sonst nach Best-Effort variieren). T soll das Gefühl haben, dass die Frühstücke wirklich abwechseln.
+**Variation:** Pro Aufruf möglichst eine andere Kombination als in der Vorwoche (sofern aus Blatt `Wünsche` ablesbar – sonst nach Best-Effort variieren). T soll das Gefühl haben, dass die Frühstücke wirklich abwechseln.
 
 **Wunsch / Sondermodus aus Phase 1:**
 - „nur süß" → nur süße Make-ahead-Varianten und süße Warm/Frisch (FR18 Pancakes, FR19 Bananen-Toast).
@@ -195,7 +196,7 @@ Direkt darunter: kurze Begründung, warum die Mischung so aussieht (1–2 Sätze
 
 Schreibe die strukturierte Einkaufsliste als `.txt`-Datei in den **Wochenunterordner**:
 
-`Rezepte_Spiegel/Wochenpläne/KW[Nr]_[Jahr]/einkaufsliste_KW[Nr]_[Jahr].txt` (Wochenordner per Drive-Connector als Ordner unter der Wochenpläne-ID anlegen)
+`Rezepte/Wochenpläne/KW[Nr]_[Jahr]/einkaufsliste_KW[Nr]_[Jahr].txt` (Wochenordner per Drive-Connector als Ordner unter der Wochenpläne-ID anlegen)
 
 Wenn der Wochenunterordner noch nicht existiert, beim ersten Schreibvorgang anlegen. Wenn der übergeordnete `Wochenpläne/`-Ordner noch nicht existiert (sehr unwahrscheinlich, aber möglich), beim ersten Schreibvorgang ebenfalls anlegen.
 
@@ -249,7 +250,7 @@ Lege alle Rezepte der Woche als PDF in den Wochenunterordner. Drei Quellen-Typen
 
 #### 7a. Rezepte mit Original-PDF im Rezepteordner
 
-Für jedes Hauptmahlzeit-Gericht und Frühstück, dessen Index-Eintrag eine PDF-Datei referenziert (Spalte „PDF" gefüllt):
+Für jedes Hauptmahlzeit-Gericht und Frühstück, dessen Index-Eintrag eine PDF-Datei referenziert (Spalte „Datei" gefüllt):
 
 → **Kopie** der Original-PDF in den Wochenordner. Das Original im Quellordner bleibt unverändert.
 
@@ -261,9 +262,9 @@ Dateiname im Wochenordner:
 
 #### 7b. HF-Stil-Eigen / Neuentdeckungen / Frühstücke ohne Original-PDF
 
-Für Gerichte oder Frühstücke, die der Skill als Neuentdeckung erfunden hat (NE-Einträge in `standardgerichte.md`), oder für Frühstücke ohne PDF-Eintrag in `fruehstuecke.md`:
+Für Gerichte oder Frühstücke, die der Skill als Neuentdeckung erfunden hat (Zeilen mit Gruppe `Neuentdeckung` im Blatt `Rezepte`), oder für Frühstücke ohne PDF-Eintrag in Blatt `Frühstücke`:
 
-→ **Generiere ein neues PDF** aus der Rezeptbeschreibung (Zutaten + Zubereitung). Quelle: bei Hauptmahlzeiten der vom Skill in Phase 3a generierte HF-Stil-Vorschlag, bei Frühstücken die „Notiz / Kurzrezept"-Spalte aus `fruehstuecke.md`.
+→ **Generiere ein neues PDF** aus der Rezeptbeschreibung (Zutaten + Zubereitung). Quelle: bei Hauptmahlzeiten der vom Skill in Phase 3a generierte HF-Stil-Vorschlag, bei Frühstücken die Spalte „Kurzrezept" im Blatt `Frühstücke`.
 
 PDF-Inhalt (Standardlayout, sauber formatiert):
 ```
@@ -289,7 +290,7 @@ Dateiname: identisch zur Konvention in 7a.
 
 #### 7c. Wunschgerichte aus dem Internet
 
-Wenn T in Phase 1 ein Wunschgericht genannt hat, das weder in `standardgerichte.md` noch im Rezepteordner ist (und der Skill in Phase 3a per URL einen Vorschlag dafür gemacht hat):
+Wenn T in Phase 1 ein Wunschgericht genannt hat, das weder in Blatt `Rezepte` noch im Rezepteordner ist (und der Skill in Phase 3a per URL einen Vorschlag dafür gemacht hat):
 
 → **Erste Wahl:** Rezept aus dem Internet als PDF herunterladen oder die Rezept-URL in ein PDF konvertieren (per `web_fetch` Inhalt holen, in Markdown bringen, daraus PDF generieren).
 → **Fallback:** Rezept-Inhalt vom Skill paraphrasiert ins Standardlayout aus 7b bringen und als PDF generieren. **Wichtig:** Nicht 1:1 abschreiben (Urheberrecht), sondern Zutaten + Zubereitung in eigenen Worten zusammenfassen, mit klarer Quellenangabe (URL und Originaltitel) im PDF-Header.
@@ -320,11 +321,11 @@ Die Gerichte des Wochenplans mit Datum und Status `geplant` an das Blatt `Kochlo
 
 Falls in dieser Woche neue Gerichte / Frühstücke aufgenommen wurden:
 
-- Hauptmahlzeit-Neuentdeckung → Eintrag in `standardgerichte.md` Sektion „HF-Stil-Eigen / Neuentdeckungen", Status `neu`.
-- Frühstücks-Neuentdeckung → Eintrag in `fruehstuecke.md` Sektion „Wunsch / Neu / Pause", Status `neu`.
-- Konkreter Wunsch von T (Mittag/Abend oder Frühstück), der eingeplant wurde → in `wunschrezepte.md` von der Wunsch- in die Eingeplant-Sektion verschieben oder löschen.
+- Hauptmahlzeit-Neuentdeckung → Zeile im Blatt `Rezepte` anhängen: ID `NE..` (fortlaufend), Gruppe `Neuentdeckung`, Status `neu`, Erstmals = heute.
+- Frühstücks-Neuentdeckung → Zeile im Blatt `Frühstücke` anhängen: ID `FR..` (fortlaufend), Status `neu`, Kurzrezept ausfüllen.
+- Konkreter Wunsch von T (Mittag/Abend oder Frühstück), der eingeplant wurde → im Blatt `Wünsche` die Art der Zeile von `Wunsch` bzw. `Frühstücks-Wunsch` auf `Eingeplant` setzen und das Datum eintragen.
 
-Wenn T später zurückmeldet „die Bircher waren super, gerne öfter": Status in `fruehstuecke.md` von `standard` auf weiterhin `standard` lassen, aber in `wunschrezepte.md` unter „Frühstücks-Lieblinge" eintragen. Wenn T sagt „die Eier-Muffins sind nichts für uns": Status in `fruehstuecke.md` auf `nein` setzen.
+Wenn T später zurückmeldet „die Bircher waren super, gerne öfter": Status im Blatt `Frühstücke` auf `standard` lassen, aber im Blatt `Wünsche` eine Zeile mit Art `Frühstücks-Liebling` anhängen. Wenn T sagt „die Eier-Muffins sind nichts für uns": Status im Blatt `Frühstücke` auf `nein` setzen.
 
 ### Optional – Kochmodus / Frühstücks-Prep-Modus
 
